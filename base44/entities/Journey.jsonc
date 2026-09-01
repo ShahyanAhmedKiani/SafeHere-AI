@@ -1,0 +1,43 @@
+{
+  "name": "Journey",
+  "type": "object",
+  "properties": {
+    "from_label": {
+      "type": "string"
+    },
+    "to_label": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "active",
+        "completed",
+        "deviated"
+      ],
+      "default": "planned"
+    },
+    "expected_arrival": {
+      "type": "string"
+    },
+    "trusted_contact_name": {
+      "type": "string"
+    },
+    "route_safety_percent": {
+      "type": "number"
+    },
+    "eta_minutes": {
+      "type": "number"
+    },
+    "notify_on_deviation": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "from_label",
+    "to_label",
+    "status"
+  ]
+}
